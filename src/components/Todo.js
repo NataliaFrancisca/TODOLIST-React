@@ -17,11 +17,11 @@ class Todo extends Component{
             },
             {
                 id: 3,
-                text: 'fazer trabalho da escola'
+                text: 'fazer trabalho da faculdade'
             },
             {
                 id: 4,
-                text: 'bater no react'
+                text: 'aprender react'
             },
         ],
 
