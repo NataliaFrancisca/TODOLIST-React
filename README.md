@@ -7,3 +7,7 @@
 - [ ] salvar os dados no localStorage
 - [ ] deixar responsivo
 
+#### Teste você mesmo ➡️ 
+
+:link: https://todo-list-nf.netlify.app/
+
