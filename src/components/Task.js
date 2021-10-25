@@ -6,13 +6,13 @@ import { useState } from 'react';
 
 const Task = (props) => {
 
-    const [test, setTest] = useState("unchecked");
+    const [taskStyle, setTaskStyle] = useState("unchecked");
     const onCheck = () => {
-        setTest("checked");
+        setTaskStyle("checked");
     }
  
     return(
-        <div className={test + " container-task"}>
+        <div className={taskStyle + " container-task"}>
             <p className="container-text">{props.textTarefa}</p>
                 <div className="container-buttons">
                     <button onClick={onCheck}>
