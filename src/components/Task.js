@@ -7,6 +7,7 @@ import { useState } from 'react';
 const Task = (props) => {
 
     const [taskStyle, setTaskStyle] = useState("unchecked");
+
     const onCheck = () => {
         setTaskStyle("checked");
     }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './Todo.css';
 import Task from './Task';
+import { useState } from 'react';
 
 class Todo extends Component{
 
@@ -30,7 +31,6 @@ class Todo extends Component{
         }
     }
 
-
    //  adicionando uma nova tarefa
     addTask = (event) => {
         event.preventDefault();
@@ -58,7 +58,13 @@ class Todo extends Component{
         this.setState({tasks: list});
     }
 
+    deleteAllTask = event => {
+        let list = [];
+        this.setState({tasks: list})
+    }
+
     render(){
+
         return(
             <main className="container">
                 <h2 className="container-title"> TO-DO LIST</h2>
@@ -84,6 +90,11 @@ class Todo extends Component{
                            onDelete={this.deleteTask.bind(this, tarefa)} 
                         />
                     ))}
+                </div>
+
+                <div className="container-buttons">
+                    <button>Check All</button>
+                    <button onClick={this.deleteAllTask}>Delete All</button>
                 </div>
             </main>
         )

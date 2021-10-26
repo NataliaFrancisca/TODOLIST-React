@@ -34,8 +34,11 @@
     cursor: pointer;
 }
 
-.container-buttons button:hover span{
+.container-buttons button:first-child:hover span{
     color: rgb(255,140,0);
+}
+.container-buttons button:last-child:hover span{
+    color: rgb(160, 96, 219);
 }
 
 .container-task.checked{
