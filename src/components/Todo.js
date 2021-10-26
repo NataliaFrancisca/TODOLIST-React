@@ -7,22 +7,6 @@ class Todo extends Component{
 
     state = {
         tasks: [
-            {
-                id: 1,
-                text: 'comprar pão'
-            },
-            {
-                id: 2,
-                text: 'comprar sobonete'
-            },
-            {
-                id: 3,
-                text: 'fazer trabalho da faculdade'
-            },
-            {
-                id: 4,
-                text: 'aprender react'
-            },
         ],
 
         newTask: {
