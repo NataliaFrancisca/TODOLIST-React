@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import './Todo.css';
 import Task from './Task';
-import { useState } from 'react';
 
 class Todo extends Component{
 
@@ -28,6 +27,10 @@ class Todo extends Component{
 
         newTask: {
             text: ''
+        },
+
+        stateTask: {
+            status: 'unchecked'
         }
     }
 
@@ -58,7 +61,7 @@ class Todo extends Component{
         this.setState({tasks: list});
     }
 
-    deleteAllTask = event => {
+    deleteAllTask = () => {
         let list = [];
         this.setState({tasks: list})
     }
@@ -67,7 +70,7 @@ class Todo extends Component{
 
         return(
             <main className="container">
-                <h2 className="container-title"> TO-DO LIST</h2>
+                <h2 className="container-title"><i class="fas fa-ghost" />TO-DO LIST</h2>
                 <hr></hr>
 
                 <form method="post" className="container-form" onSubmit={this.addTask}> 
@@ -83,8 +86,10 @@ class Todo extends Component{
                 </form>
 
                 <div className="list-elements">
+
                     {this.state.tasks.map((tarefa) => (
                         <Task 
+                           stateTask={this.state.stateTask.status} 
                            key={tarefa.id}
                            textTarefa={tarefa.text}
                            onDelete={this.deleteTask.bind(this, tarefa)} 
@@ -92,10 +97,9 @@ class Todo extends Component{
                     ))}
                 </div>
 
-                <div className="container-buttons">
-                    <button>Check All</button>
-                    <button onClick={this.deleteAllTask}>Delete All</button>
-                </div>
+    
+                <button className="btn-delete-all-tasks"onClick={this.deleteAllTask}>Delete All</button>
+
             </main>
         )
     }

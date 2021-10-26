@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Open+Sans:wght@300;500&display=swap');
 
 .container{
     height: 530px;
@@ -19,10 +19,13 @@
     font-family: 'Irish Grover', cursive;
 }
 
-/* (255,140,0) */
+.container-title i{
+    margin-right: 1rem;
+}
+
 hr{
     height: 2px;
-    background-color: rgb(138,43,226);
+    background-color: rgb(255,140,0);
     width: 80%;
     margin: 10px 0 10px 0;
 }
@@ -76,38 +79,28 @@ hr{
   border: solid 3px transparent;
 }
 
-.container > .container-buttons{
-   height: auto;
-   width: 80%;
-   display: flex;
-   justify-content: center;
-}
-
-.container > .container-buttons button{
+.btn-delete-all-tasks{
     height: 2.4rem;
     width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    align-self: flex-end;
+    margin-right: 15%;
    
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: .8rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    font-family: 'Irish Grover', cursive;
 
     border-radius: 5px;
+
+    background-color:  rgb(160, 96, 219);
+    color: rgb(250,250,250);
+    box-shadow: 2px 4px 6px -4px black;
 }
 
-.container > .container-buttons button:hover{
+.btn-delete-all-tasks:hover{
     filter: brightness(.9);
-}
-
-.container > .container-buttons button:first-child{
-    background-color:  rgb(255,140,0);
-    color: rgb(20,20,20);
-}
-
-.container > .container-buttons button:last-child{
-    background-color: rgba(138,43,226);
-    color: rgb(240,240,240);
-    margin-left: 1rem;
 }

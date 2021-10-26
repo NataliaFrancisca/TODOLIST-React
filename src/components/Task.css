@@ -42,5 +42,5 @@
 }
 
 .container-task.checked{
-    border-left: 5px solid green;
+    border-left: 8px solid rgb(51, 165, 51);
 }

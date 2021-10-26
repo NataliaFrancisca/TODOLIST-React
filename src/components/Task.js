@@ -1,17 +1,15 @@
 import React from 'react';
 import './Task.css';
-
-
 import { useState } from 'react';
 
 const Task = (props) => {
 
-    const [taskStyle, setTaskStyle] = useState("unchecked");
+    const [taskStyle, setTaskStyle] = useState("");
 
     const onCheck = () => {
         setTaskStyle("checked");
     }
- 
+
     return(
         <div className={taskStyle + " container-task"}>
             <p className="container-text">{props.textTarefa}</p>
